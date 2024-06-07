@@ -20,5 +20,9 @@ def incoming_sms():
     # Return a 200 OK response code
     return jsonify({'status': 'Message received'}), 200
 
+@app.route('/')
+def hello_world():
+    return 'Hello, World! This is my Flask app.'
+    
 if __name__ == "__main__":
     app.run(debug=True)

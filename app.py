@@ -10,12 +10,14 @@ def incoming_sms():
     print(request.values)
     
     # Accessing form data
-    mn = request.values.get('mn')
-    msg = request.values.get('msg')
+    mn = request.values.get('mobilenumber')
+    msg = request.values.get('message')
+    reeivedTime = request.values.get('received')
     
     # Process the data as needed
     print("Mobile number:", mn)
     print("Message:", msg)
+    print("Message Time:", reeivedTime)
     
     # Return a 200 OK response code
     return jsonify({'status': 'Message received'}), 200
